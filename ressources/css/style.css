@@ -9,6 +9,7 @@ body{
   color: white;
   font-family: helvetica;
   font-size: 18px;
+  line-height: 1.4;
 }
 
 
@@ -27,8 +28,12 @@ body{
 }
 
 .logo{
+  display: flex;
   padding-left: 0.5rem;
   padding-right: 1rem;
+  height: 1.5rem;
+  width: 2rem;
+
 }
 
 /* Home section */
@@ -74,35 +79,72 @@ body{
   padding-bottom: 0.75rem;
 }
 
+.mobile-nav{
+  display: none;
+}
 
 /*articles section */
 
+@media only screen and (max-width: 1024px){
+  .pictures{
+    width: 47%;
+  }
+
+  .navigation h4{
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
 .presentation{
   display: flex;
+  background-color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  background-color: green;
+  align-items: center;
 }
 
 .articles{
   display: flex;
+  flex-wrap: nowrap;
   padding-top: 3rem;
-  align-items: column;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
 
+}
+
+.articles h5{
+  text-align: center;
+  width: 100%;
 }
 
 .pictures{
-  display: block;
-  border-width: 4px;
-  border-color: black;
-}
-
-.pictures img{
-  height: 9rem;
+  display: flex;
+  margin: 5px;
   width: 30%;
 }
 
+.pictures img{
+  display: flex;
+  max-width: 8rem;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-right: 3rem;
+  align-items: center;
+  justify-content: center;
+
+}
+.photos img{
+  display: flex;
+  border-color: 4px solid black;
+}
 .pictures h5{
   background-color: black;
   padding-top: 05rem auto;
@@ -111,18 +153,63 @@ body{
 
 /* informations section*/
 
-.information{
-  display: inline-block;
-  align-items: column;
-  background-color:black;
+.informations{
+ display: flex;
+ background-color: white;
+ justify-content: space-between;
+ align-content: center;
+ padding-bottom: 4rem;
+ width: 100%;
 }
 
 .location{
   display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  width: 35%;
 }
 
 .hours{
   display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  width: 35%;
+}
+
+@media only screen and (max-width: 470px){
+    .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+
+    .navigation h4{
+    display: none;
+  }
+    .pictures{
+    width: 90%;
+  }
+
+    .title h2{
+    font-size: 0.77rem;
+    padding-left: 2rem;
+  }
+
+    .title h1{
+      font-size: 1rem;
+      padding-left: 2rem;
+    }
+
+    .title{
+      margin top: 10rem;
+      height: 5rem;
+      padding-top: 1rem;
+     padding-bottom: 1rem;
+    }
+
+    .home{
+      align-content: center;
+      height: 15rem;
+    }
 }
 
 /*Footer*/
@@ -131,4 +218,7 @@ footer{
   display: flex;
   width: 100%;
   background-color: black;
+  height: 5rem;
+  text-align: left;
+  align-items: center;
 }
